@@ -1,0 +1,162 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace дз5пр
+{
+   
+
+        class Product
+    {
+        private int артикул;
+        public int Артикул
+        {
+            get
+            {
+                return артикул;
+            }
+            set
+            {
+                артикул = value;
+            }
+        }
+
+        private string имя;
+        public string Имя
+        {
+            get
+            {
+                return имя;
+            }
+            set
+            {
+                имя = value;
+            }
+        }
+        private decimal цена;
+        public decimal Цена
+        {
+            get
+            {
+                return цена;
+            }
+            set
+            {
+                цена = value;
+            }
+        }
+        private int срок;
+        public int Срок
+        {
+            get
+            {
+                return срок;
+            }
+            set
+            {
+                срок = value;
+            }
+        }
+        private DateTime выпуск;
+        public DateTime Выпуск
+        {
+            get
+            {
+                return выпуск;
+            }
+            set
+            {
+                выпуск = value;
+            }
+        }
+        public static Product[] myMassive = new Product[5];
+
+        private static void init()
+        {
+            Product pr1 = new Product();
+            pr1.Имя = "Паста арахисовая";
+            pr1.Артикул = 123469;
+            pr1.Цена = 354;
+            pr1.Срок = 8;
+            pr1.Выпуск = new DateTime(04);
+
+
+            Product pr2 = new Product();
+            pr2.Имя = "Коктель Молотого";
+            pr2.Артикул = 678687;
+            pr2.Цена = 3000;
+            pr2.Срок = 2;
+            pr2.Выпуск = new DateTime(05);
+
+            Product pr3 = new Product();
+            pr3.Имя = "Секс на пляже";
+            pr3.Артикул = 575768;
+            pr3.Цена = 2000;
+            pr3.Срок = 3;
+            pr3.Выпуск = new DateTime(08);
+
+            Product pr4 = new Product();
+            pr4.Имя = "АК-47";
+            pr4.Артикул = 777797;
+            pr4.Цена = 20000;
+            pr4.Срок = 9;
+            pr4.Выпуск = new DateTime(01);
+
+            Product pr5 = new Product();
+            pr5.Имя = "Курсовая";
+            pr5.Артикул = 544644;
+            pr5.Цена = 45000;
+            pr5.Срок = 5;
+            pr5.Выпуск = new DateTime(09);
+
+
+            myMassive[0] = pr1;
+            myMassive[1] = pr2;
+            myMassive[2] = pr3;
+            myMassive[3] = pr4;
+            myMassive[4] = pr5;
+        }
+        
+
+
+    }
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    
+    public partial class MainWindow : Window
+
+    {
+        
+        
+
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) //вывод всего
+        {
+            Product[] st=new Product[5];
+            TB1.Text = st.myMassive[]; 
+
+
+        }
+    }
+}
