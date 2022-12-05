@@ -1,0 +1,16 @@
+﻿<Window x:Class="dz5_13.MainWindow"
+       
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dz5_13"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Ss" TextWrapping="Wrap" Text="TextBox" Margin="0,0,425,0" TextChanged="Ss"/>
+        <Button x:Name="B1" Content="Список товаров" HorizontalAlignment="Left" Margin="510,94,0,0" VerticalAlignment="Top" Width="155" Height="60"  AutomationProperties.Name="B1" Click="B1_Click"/>
+        <Button x:Name="B2" Content="Неиспорченные товары" HorizontalAlignment="Left" Margin="510,202,0,0" VerticalAlignment="Top" Width="155" Height="52"AutomationProperties.Name="B2" Click="B2_Click"/>
+
+    </Grid>
+</Window>

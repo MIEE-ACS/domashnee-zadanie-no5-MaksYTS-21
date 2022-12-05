@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>maks__dz_5</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="C:\Users\Сергей\Documents\GitHub\domashnee-zadanie-no5-MaksYTS-21\maks  dz_5\MainWindow.xaml" Link="MainWindow.xaml" />
+  </ItemGroup>
+
+</Project>

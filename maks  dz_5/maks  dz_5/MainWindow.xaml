@@ -1,0 +1,16 @@
+﻿<Window x:Class="maks__dz_5.MainWindow"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:maks__dz_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Ss" HorizontalAlignment="Left" TextWrapping="Wrap"  Width="380" Height="434"/>
+        <Button x:Name="B1" Content="Вывод всех продуктов" HorizontalAlignment="Left" Margin="475,69,0,0" VerticalAlignment="Top" Height="55" Width="205" Click="B1_Click"/>
+        <Button x:Name="B2" Content="непросорченные продукты" HorizontalAlignment="Left" Margin="475,274,0,0" VerticalAlignment="Top" Width="205" Height="55" Click="B2_Click"/>
+    </Grid>
+</Window>   
+
+    
