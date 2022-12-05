@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,9 +17,8 @@ using System.Windows.Shapes;
 namespace дз5пр
 {
 
-    
-}
-class Product
+
+    class Product
     {
         private int артикул;
         public int Артикул
@@ -81,16 +81,12 @@ class Product
                 выпуск = value;
             }
         }
-
-
-
-
-
-
     }
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
 
     public partial class MainWindow : Window
 
@@ -145,35 +141,50 @@ class Product
 
         public MainWindow()
         {
-            InitializeComponent();
+           // InitializeComponent();
             init();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+       /* private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e) //вывод всего
+       */
+        private void B2_Click(object sender, RoutedEventArgs e)
         {
-            TB1.Clear();
+            DateTime z = new DateTime();
+            z = DateTime.Now;
+            Ss.Clear();
+            string str;
+            for (uint i = 0; i < myMassive.Length; i++)
+            {
+                
+                if (z >= myMassive[i].Выпуск)
+                {
+                    Ss.Text += myMassive[i].Имя + '\n';
+                    Ss.Text += Convert.ToString(myMassive[i].Срок) + '\n';
+                    Ss.Text += Convert.ToString(myMassive[i].Цена) + '\n';
+                    Ss.Text += Convert.ToString(myMassive[i].Артикул) + '\n';
+                    
+                }
+            }
+        }
+
+        private void B1_Click(object sender, RoutedEventArgs e)
+        {
+            Ss.Clear();
             string str;
             for (int i = 0; i < myMassive.Length; i++)
             {
 
 
-                TB1.Text += myMassive[i].Имя + '\n';
-                TB1.Text += Convert.ToString(myMassive[i].Выпуск) + '\n';
-                TB1.Text += Convert.ToString(myMassive[i].Цена) + '\n';
-                TB1.Text += Convert.ToString(myMassive[i].Артикул) + '\n';
-                TB1.Text += Convert.ToString(myMassive[i].Срок) + '\n';
+                Ss.Text += myMassive[i].Имя + '\n';
+                Ss.Text += Convert.ToString(myMassive[i].Выпуск) + '\n';
+                Ss.Text += Convert.ToString(myMassive[i].Цена) + '\n';
+                Ss.Text += Convert.ToString(myMassive[i].Артикул) + '\n';
+                
             }
-
-
-
         }
-
-
     }
 }
 
